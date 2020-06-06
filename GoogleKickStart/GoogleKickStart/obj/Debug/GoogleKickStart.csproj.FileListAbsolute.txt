@@ -1,7 +1,6 @@
 E:\GS2018\E\Yang\Program\Git\GitYang\GoogleKickStart\GoogleKickStart\GoogleKickStart\bin\Debug\GoogleKickStart.exe.config
 E:\GS2018\E\Yang\Program\Git\GitYang\GoogleKickStart\GoogleKickStart\GoogleKickStart\bin\Debug\GoogleKickStart.exe
 E:\GS2018\E\Yang\Program\Git\GitYang\GoogleKickStart\GoogleKickStart\GoogleKickStart\bin\Debug\GoogleKickStart.pdb
-E:\GS2018\E\Yang\Program\Git\GitYang\GoogleKickStart\GoogleKickStart\GoogleKickStart\obj\Debug\GoogleKickStart.csprojAssemblyReference.cache
-E:\GS2018\E\Yang\Program\Git\GitYang\GoogleKickStart\GoogleKickStart\GoogleKickStart\obj\Debug\GoogleKickStart.csproj.CoreCompileInputs.cache
 E:\GS2018\E\Yang\Program\Git\GitYang\GoogleKickStart\GoogleKickStart\GoogleKickStart\obj\Debug\GoogleKickStart.exe
 E:\GS2018\E\Yang\Program\Git\GitYang\GoogleKickStart\GoogleKickStart\GoogleKickStart\obj\Debug\GoogleKickStart.pdb
+E:\GS2018\E\Yang\Program\Git\GitYang\GoogleKickStart\GoogleKickStart\GoogleKickStart\obj\Debug\GoogleKickStart.csprojResolveAssemblyReference.cache

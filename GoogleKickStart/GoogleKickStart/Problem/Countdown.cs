@@ -20,46 +20,29 @@ namespace GoogleKickStart.Problem
 
 
 
-			for (int i = 0; i < caseCou; i++)
+			for (int c = 0; c < caseCou; c++)
 			{
 				int totalCountDown = 0;
 
 				info = Console.ReadLine().Split(' ').ToList();
 				int countdown = Convert.ToInt32(info[1]);
-				nums = Console.ReadLine().Split(' ').Select(s => Convert.ToInt32(s)).ToList();
+				nums = Console.ReadLine().Split(' ').Where(s => !String.IsNullOrWhiteSpace(s)).Select(s => Convert.ToInt32(s)).ToList();
 
 				int accumulateCuontdown = 0;
-				for (int j = 0; j <= nums.Count - countdown; j++)
+				for (int i = countdown - 1; i < nums.Count; ++i)
 				{
-					if (nums[j] == countdown)
+					int ok = 1;
+					for (int j = 1; j <= (countdown & ok); ++j)
 					{
-						bool isCd = true;
-						int jump = 0;
-						for (int k = 0; k < countdown; k++)
+						if (nums[i + 1 - j] != j)
 						{
-							if (nums[j + k] == countdown - k)
-							{
-								jump++;
-							}
-							else
-							{
-								isCd = false;
-								break;
-							}
+							ok = 0;
 						}
-
-						if (isCd)
-						{
-							totalCountDown++;
-						}
-						j += jump;
-
 					}
-
-
+					totalCountDown += ok;
 				}
 
-				Console.WriteLine($"Case #{i + 1}: {totalCountDown}");
+				Console.WriteLine($"Case #{c + 1}: {totalCountDown}");
 
 				
 			}
