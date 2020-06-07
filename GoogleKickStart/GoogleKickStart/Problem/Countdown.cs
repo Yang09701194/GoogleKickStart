@@ -34,7 +34,7 @@ namespace GoogleKickStart.Problem
 					if (nums[j] == countdown)
 					{
 						bool isCd = true;
-						int jump = 0;
+						//int jump = -1;
 						for (int k = 0; k < countdown; k++)
 						{
 							if (nums[j + k] == countdown - k)
@@ -52,7 +52,8 @@ namespace GoogleKickStart.Problem
 						{
 							totalCountDown++;
 						}
-						//j += jump;
+						//if(jump > 0)
+						//	j += jump;
 
 					}
 
