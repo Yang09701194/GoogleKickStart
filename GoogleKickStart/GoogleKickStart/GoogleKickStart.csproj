@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="2020D\AlienPiano.cs" />
+    <Compile Include="2020D\RecordBreaker.cs" />
     <Compile Include="Problem\Countdown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
