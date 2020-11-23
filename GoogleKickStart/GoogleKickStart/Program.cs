@@ -11,13 +11,15 @@ namespace GoogleKickStart
         static void Main(string[] args)
         {
 
-			AlienPiano.Run();
+			CombinationLock.Run();
 
-
+			//MaximumCoins.Run();
+			//Kick_Start.Run();
+			//ATMQueue.Run();
+			//AlienPiano.Run();
 			//RecordBreaker.Run();
-
-
 			//Countdown.Run();
+
 
 
 			Console.Read(); 

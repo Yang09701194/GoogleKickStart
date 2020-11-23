@@ -43,6 +43,11 @@
   <ItemGroup>
     <Compile Include="2020D\AlienPiano.cs" />
     <Compile Include="2020D\RecordBreaker.cs" />
+    <Compile Include="2020F\ATMQueue.cs" />
+    <Compile Include="2020F\MetalHarvest.cs" />
+    <Compile Include="2020G\CombinationLock.cs" />
+    <Compile Include="2020G\Kick_Start.cs" />
+    <Compile Include="2020G\MaximumCoins.cs" />
     <Compile Include="Problem\Countdown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
