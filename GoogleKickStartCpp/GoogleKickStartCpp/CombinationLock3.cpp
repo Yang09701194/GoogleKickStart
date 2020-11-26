@@ -1,5 +1,10 @@
 #include "pch.h"
 
+//GCC
+//#include <bits/stdc++.h>
+//#include <ext/pb_ds/assoc_container.hpp>
+//#include <ext/pb_ds/tree_policy.hpp>
+
 using namespace std;
 
 #include <string>;
@@ -54,8 +59,9 @@ int MainRun3() {
 	int t = 1;
 	cin >> t;
 	for (int i = 0; i < t; i++) {
-		cout << "Case #" << i << ": " << endl;
+		cout << "Case #" << i+1 << ": ";// << endl;
 		solve3();
+		cout << '\n' ; 
 	}
 
 	return 0;
