@@ -21,6 +21,9 @@
     <ClInclude Include="CombinationLock2.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CombinationLock3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CombinationLock2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CombinationLock3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

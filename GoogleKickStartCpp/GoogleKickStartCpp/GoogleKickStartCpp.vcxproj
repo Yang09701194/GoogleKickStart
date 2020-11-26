@@ -152,11 +152,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CombinationLock2.h" />
+    <ClInclude Include="CombinationLock3.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CombinationLock.cpp" />
     <ClCompile Include="CombinationLock2.cpp" />
+    <ClCompile Include="CombinationLock3.cpp" />
     <ClCompile Include="GoogleKickStartCpp.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

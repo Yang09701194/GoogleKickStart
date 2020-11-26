@@ -3,13 +3,14 @@
 
 #include "pch.h"
 #include <iostream>
-#include "CombinationLock2.h";
+//#include "CombinationLock2.h";
+#include "CombinationLock3.h";
 
 
 
 int main()
 {
-	MainRun();
+	MainRun3();
 
     //std::cout << "Hello World!\n"; 
 }
