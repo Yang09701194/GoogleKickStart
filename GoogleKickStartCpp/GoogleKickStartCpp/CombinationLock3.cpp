@@ -2,8 +2,6 @@
 
 using namespace std;
 
-#define ll long long
-#define ar array
 #include <string>;
 #include <iostream>;
 #include <vector>;
@@ -13,21 +11,21 @@ void solve3() {
 	int n, w;
 	cin >> n;
 	cin >> w;
-	vector<ll> x(n);
+	vector<long long> x(n);
 	for(auto& a : x)
 		cin >> a;
 	for(auto& a : x)
 		a += -1;
 	sort(x.begin(), x.end());
-	ll ans = 1e18, ca = 0;
-	priority_queue<ll, vector<ll>, greater<ll>> pq1, pq2;
+	long long ans = 1e18, ca = 0;
+	priority_queue<long long, vector<long long>, greater<long long>> pq1, pq2;
 	for (int i = 0; i < n; i++) {
 		ca += x.back() - x[i];
 		pq1.push(x[i]);
 	}
 	for (int i = 0; i < n; i++) {
 		int j = (i + n - 1) % n;
-		ll x2 = x[j] + (i ? w : 0);
+		long long x2 = x[j] + (i ? w : 0);
 		while (pq1.size() >0 && abs(x2 - pq1.top()) > abs(x2 - pq1.top() - w)) {
 			ca +=abs(x2 - pq1.top() - w) - abs(x2 - pq1.top());
 			pq2.push(pq1.top() + w);
@@ -35,7 +33,7 @@ void solve3() {
 		}
 		if (ca < ans)
 			ans = ca;
-		vector<ll> v;
+		vector<long long> v;
 		while ((int)pq2.size() && x[i] + w > pq2.top()) {
 			v.push_back(pq2.top());
 			ca -= pq2.top() - x2;
