@@ -13,59 +13,59 @@ namespace GoogleKickStart
 
 
 		/// <summary>
-		/// 參考
+		/// 參考 cpp ver
+		/// 10^9  真的就要 long  int馬上吃Wrong Answer
+		/// 應該做到C++ 100%轉C#了  但是test case 3 還是TLE 怪 目前沒招  明明C++已經全pass了  
 		/// </summary>
 		public static void Run()
 		{
-
-
-			List<int> nums = new List<int>();
 			List<string> info = new List<string>();
 
-			int caseCou = Convert.ToInt32(Console.ReadLine());
+			long caseCou = Convert.ToInt64(Console.ReadLine());
 
-			for (int i = 0; i < caseCou; i++)
+			for (long o = 0; o < caseCou; o++)
 			{
 
 				info = Console.ReadLine().Split(' ').ToList();
-				int cou = Convert.ToInt32(info[0]);
-				int max = Convert.ToInt32(info[1]);
-				int max_half = max / 2;
-				List<int> eles = Console.ReadLine().Split(' ').Select(s => Convert.ToInt32(s)).ToList();
+				long cou = Convert.ToInt64(info[0]);
+				long max = Convert.ToInt64(info[1]);
+				List<long> eles = Console.ReadLine().Split(' ').Select(s => Convert.ToInt64(s)).ToList();
 				for (int j = 0; j < eles.Count; j++)
 				{
 					eles[j] -= 1;
 				}
 				int n = eles.Count;
 				eles.Sort();
-				long ans = int.MaxValue, ca = 0;
-				List<int> pq1 = new List<int>(); 
-				List<int> pq2 = new List<int>();
-				for (int c = 0; c < n; c++)
+				long ans = long.MaxValue, ca = 0;
+				List<long> pq1 = new List<long>(); 
+				List<long> pq2 = new List<long>();
+				for (int i = 0; i < n; i++)
 				{
-					ca += eles[0] - eles[c];
-					pq1.Add(eles[c]);
+					ca += eles[n-1] - eles[i];
+					pq1.Add(eles[i]);
 				}
-				for (int c = 0; c < pq1.Count; c++)
+				pq1.Sort();
+				for (int i = 0; i < n; i++)
 				{
-					int j = (c + n - 1) % n;
-					int x2 = eles[j] + i == 0 ? max : 0;
+					int j = (i + n - 1) % n;
+					long x2 = eles[j] + (i > 0 ? max : 0);
 					while (pq1.Count > 0 && Math.Abs(x2 - pq1.First()) > Math.Abs(x2 - pq1.First() - max))
 					{
-						ca += Math.Abs(x2 - pq1.First()) - Math.Abs(x2 - pq1.First());
+						ca += Math.Abs(x2 - pq1.First() - max) - Math.Abs(x2 - pq1.First());
 						pq2.Add(pq1.First()+max);
-						pq2.Sort();
+						//pq2.Sort();
 						pq1.RemoveAt(0);
 					}
 
 					ans = ans < ca ? ans : ca;
-					List<int> v = new List<int>();
-					while (pq2.Count> 0 && eles[c]+max>pq2.First())
+					List<long> v = new List<long>();
+					while (pq2.Count> 0 && eles[i]+max>pq2.First())
 					{
 						v.Add(pq2.First());
 						ca -= pq2.First() - x2;
-						ca += eles[c] + max - pq2.First();
+						ca += eles[i] + max - pq2.First();
 						pq2.RemoveAt(0);
+
 					}
 
 					ca += (eles[i] + max - x2) * (pq1.Count - pq2.Count);
@@ -73,14 +73,12 @@ namespace GoogleKickStart
 					{
 						pq1.Add(ve);
 					}
-					pq1.Sort();
+					//pq1.Sort();
 				}
 
-				Console.WriteLine($"Case #{i + 1}: {ans}");
-
+				Console.WriteLine($"Case #{o + 1}: {ans}");
 
 			}
-
 
 		}
 
@@ -90,41 +88,37 @@ namespace GoogleKickStart
 		public static void Run2()
 		{
 
-
-			List<int> nums = new List<int>();
+			List<long> nums = new List<long>();
 			List<string> info = new List<string>();
 
-			int caseCou = Convert.ToInt32(Console.ReadLine());
+			long caseCou = Convert.ToInt64(Console.ReadLine());
 
-			for (int i = 0; i < caseCou; i++)
+			for (long i = 0; i < caseCou; i++)
 			{
 
 				info = Console.ReadLine().Split(' ').ToList();
-				int cou = Convert.ToInt32(info[0]);
-				int max = Convert.ToInt32(info[1]);
-				int max_half = max / 2;
-				List<int> eles = Console.ReadLine().Split(' ').Select(s => Convert.ToInt32(s)).ToList();
-
-
-				
+				long cou = Convert.ToInt64(info[0]);
+				long max = Convert.ToInt64(info[1]);
+				long max_half = max / 2;
+				List<long> eles = Console.ReadLine().Split(' ').Select(s => Convert.ToInt64(s)).ToList();
 
 				long minDist = long.MaxValue;
 
-				int eMax = eles.Max(), eMin = eles.Min();
+				long eMax = eles.Max(), eMin = eles.Min();
 				if (eMax - eMin < max_half && eles.Count > 1000)
 				{
 					var elesOrder = eles.OrderBy(e => e).ToList();
-					int idx = elesOrder.Count / 2;
-					List<int> idxs = new List<int>() { idx + 1 };
+					long idx = elesOrder.Count / 2;
+					List<long> idxs = new List<long>() { idx + 1 };
 					for (int d = 0; d < 3; d++)
 					{
-						int point = idxs[d];
+						long polong = idxs[d];
 						for (int j = 0; j < elesOrder.Count; j++)
 						{
 							long totalDist = 0;
 							if (j != d)
 							{
-								int dist = Math.Abs(elesOrder[j] - elesOrder[d]);
+								long dist = Math.Abs(elesOrder[j] - elesOrder[d]);
 								if (dist > max_half)
 									dist = max - dist;
 								totalDist += dist;
@@ -135,19 +129,17 @@ namespace GoogleKickStart
 						}
 
 					}
-
-
 				}
 				else//這段就可以pass 2個test   最後一個TLE
 				{
 					for (int j = 0; j < eles.Count; j++)
 					{
 						long totalDist = 0;
-						for (int k = 0; k < eles.Count; k++)
+						for (long k = 0; k < eles.Count; k++)
 						{
 							if (j != k)
 							{
-								int dist = Math.Abs(eles[j] - eles[k]);
+								long dist = Math.Abs(eles[j] - eles[j]);
 								if (dist > max_half)
 									dist = max - dist;
 								totalDist += dist;
