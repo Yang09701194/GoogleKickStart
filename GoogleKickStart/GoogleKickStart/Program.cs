@@ -11,7 +11,11 @@ namespace GoogleKickStart
         static void Main(string[] args)
         {
 
-			CombinationLock.Run();
+			CuttingInterval.Run();
+
+			//ArithmeticSquare.Run();
+
+			//CombinationLock.Run();
 
 			//MaximumCoins.Run();
 			//Kick_Start.Run();
@@ -19,7 +23,6 @@ namespace GoogleKickStart
 			//AlienPiano.Run();
 			//RecordBreaker.Run();
 			//Countdown.Run();
-
 
 
 			Console.Read(); 

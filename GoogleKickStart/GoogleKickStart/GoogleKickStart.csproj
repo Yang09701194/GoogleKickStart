@@ -48,6 +48,8 @@
     <Compile Include="2020G\CombinationLock.cs" />
     <Compile Include="2020G\Kick_Start.cs" />
     <Compile Include="2020G\MaximumCoins.cs" />
+    <Compile Include="2021D\ArithmeticSquare.cs" />
+    <Compile Include="2021D\CuttingInterval.cs" />
     <Compile Include="Problem\Countdown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
