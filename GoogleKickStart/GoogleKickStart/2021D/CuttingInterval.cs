@@ -146,7 +146,7 @@ namespace GoogleKickStart
 					cutCou++;
 				}
 
-				
+				 
 				Console.WriteLine($"Case #{i + 1}: {intervals.Count}");
 			}
 

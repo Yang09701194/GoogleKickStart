@@ -50,6 +50,11 @@
     <Compile Include="2020G\MaximumCoins.cs" />
     <Compile Include="2021D\ArithmeticSquare.cs" />
     <Compile Include="2021D\CuttingInterval.cs" />
+    <Compile Include="2023\Art.cs" />
+    <Compile Include="2023\Bulb.cs" />
+    <Compile Include="2023\Crypto.cs" />
+    <Compile Include="2023\Rainbow.cs" />
+    <Compile Include="2023\Untie.cs" />
     <Compile Include="Problem\Countdown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

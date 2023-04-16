@@ -11,7 +11,14 @@ namespace GoogleKickStart
         static void Main(string[] args)
         {
 
-			CuttingInterval.Run();
+			//Art.Run();
+			//Rainbow.Run();
+			//Crypto.Run();
+			
+			//Bulb.Run();
+			//Untie.Run();
+
+			//CuttingInterval.Run();
 
 			//ArithmeticSquare.Run();
 
